@@ -2,9 +2,9 @@ import React from "react";
 import HomeCard from "../../components/dashboard/homeCard";
 
 export default function homeBody() {
-  const arr = [1, 2, 3, 4, 5];
+  const arr = [1, 2, 3, 4, 5, 99, 9];
   return (
-    <div>
+    <div className="pattern">
       <div class="container px-5 pt-10 mx-auto">
         <div class="flex flex-wrap w-full ">
           <div class="lg:w-1/2 w-full mb-6 lg:mb-0">

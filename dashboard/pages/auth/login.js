@@ -6,7 +6,7 @@ export default function login() {
   const router = useRouter();
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen pattern bg-gray-100">
       <div className="w-full max-w-sm m-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="px-6 py-4">
           <Header />

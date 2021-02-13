@@ -1,16 +1,14 @@
 import * as types from '../constants/ActionTypes';
 
 export function addSession(sessionName) {
-  console.log('{PAWAN} add session');
   return { type: types.ADD_SESSION, sessionName };
 }
 
 export function startSession(sessionName) {
-  console.log('{PAWAN} chrome: ', chrome);
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    console.log('{PAWAN} sending message');
+    console.log('{PAWAN} sessionName: ', sessionName);
     chrome.tabs.sendMessage(tabs[0].id, {data: "start", sessionName}, function(response) {
-      console.log('{PAWAN} some response');
+      console.log('{PAWAN} response: ', response);
     });
   });
   return { type: types.START_SESSION };

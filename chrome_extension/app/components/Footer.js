@@ -14,8 +14,8 @@ export default class Footer extends Component {
   };
 
   handleStart = () => {
-    const { sessionName, startSession } = this.props.actions;
-    console.log('{PAWAN} sessionName: ', sessionName);
+    const { sessionName } = this.props;
+    const { startSession } = this.props.actions;
     if (sessionName) {
       startSession(sessionName);
     }

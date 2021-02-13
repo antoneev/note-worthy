@@ -1,4 +1,6 @@
+console.log('{PAWAN} record');
 chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
+    console.log('{PAWAN} request: ', request);
     if(request.data === "start"){
         console.log('{PAWAN} start');
         // startTracking();

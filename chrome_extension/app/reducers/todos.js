@@ -8,20 +8,22 @@ const initialState = {
 
 const actionsMap = {
   [ActionTypes.ADD_SESSION](state, action) {
-    console.log('{PAWAN} add session');
     return {
-      sessionName: action.text,
+      ...state,
+      sessionName: action.sessionName,
     };
   },
   [ActionTypes.START_SESSION](state, action) {
     return {
+      ...state,
       started: true,
-      ...state};
+    };
   },
   [ActionTypes.STOP_SESSION](state, action) {
     return {
+      ...state,
       started: false,
-      ...state};
+    };
   },
   // [ActionTypes.DELETE_TODO](state, action) {
   //   return state.filter(todo =>

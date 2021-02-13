@@ -1,0 +1,49 @@
+{
+    "manifest_version": 2,
+    "name": "Call Study",
+    "version": "1.0.0",
+    "description": "Call Study",
+    "short_name": "CallStudy",
+  
+    "icons": {
+      "128": "assets/icon.png",
+      "48": "assets/icon.png",
+      "16": "assets/icon.png"
+    },
+  
+    "browser_action": {
+      "default_popup": "html/popup.html",
+      "default_icon": "assets/icon.png"
+    },
+  
+    "background": {
+      "scripts": [
+        "javascript/micPermission.js",
+        "javascript/azure-speech-to-text.js",
+        "javascript/microsoft.cognitiveservices.speech.sdk.bundle-min.js",
+        "javascript/eventPage.js"
+      ],
+      "persistant": false
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["javascript/content.js"],
+        "css": ["css/content.css"]
+      }
+    ],
+  
+    "web_accessible_resources": ["assets/*"],
+  
+    "content_security_policy": "script-src 'self' https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js; object-src 'self'",
+  
+    "permissions": [
+      "storage",
+      "identity",
+      "<all_urls>",
+      "tabs",
+      "tabCapture"
+    ]
+  }
+  

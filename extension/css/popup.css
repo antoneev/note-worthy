@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+body {
+  min-width: 500px;
+  padding: 6px;
+  background: #efefef;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+p {
+  line-height: 1.4;
+  color: #4e4e4e;
+  font-weight: 600;
+}
+
+.logo {
+  height: 60px;
+  margin: auto;
+  display: block;
+}
+
+.action-buttons {
+  padding: 8px 14px;
+  width: 100%;
+  color: #fff;
+  background: #4b5563;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.action-buttons:focus {
+  outline: none;
+}
+
+.action-buttons:hover {
+  background: #4b5563;
+}
+
+.action-buttons:disabled:hover {
+  background: #4b5563;
+}
+
+.form {
+  margin: 10px;
+}
+
+.form > div {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form span {
+  color: #4a4a4a;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.form-input {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #acacac;
+}
+
+.form-input:hover {
+  border-color: #7b7b7b;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #727272;
+}
+
+#submit {
+  margin: 12px 0;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  height: 37px;
+  width: 100%;
+  color: #fff;
+  border: 1px solid #4285f4;
+  padding: 0;
+  cursor: pointer;
+  margin: 4px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.google-btn:focus {
+  outline: none;
+}
+
+.google-btn img {
+  height: 80%;
+  margin: 6px;
+}
+
+.google-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #4285f4;
+  color: #fff;
+  margin: 0;
+}
+
+input:disabled,
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+#content,
+#conent-buttons,
+#login {
+  display: none;
+}
+
+.details {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #545454;
+}
+
+#logOut {
+  padding: 0;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#content-buttons {
+  display: none;
+}

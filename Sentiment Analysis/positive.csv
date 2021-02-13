@@ -1,0 +1,42 @@
+,0,Sentences,Subjectivity,Polarity,Analysis
+1," This replaces the labor-intensive process of IP address management, in which every host is configured with a static IP number assigned to it
+"," This replaces the labor-intensive process of IP address management, in which every host is configured with a static IP number assigned to it
+",0.9,0.5,Positive
+3," Hosts are leased an IP number for a given amount of time, and this makes the process of managing and administering large networks more efficient
+"," Hosts are leased an IP number for a given amount of time, and this makes the process of managing and administering large networks more efficient
+",0.4642857142857143,0.35714285714285715,Positive
+4," This is good for the network administrator, but makes the security administrator's job more complicated (for example, when some IP number and associated temporary owner have to be chased down for questionable activity)
+"," This is good for the network administrator, but makes the security administrator's job more complicated (for example, when some IP number and associated temporary owner have to be chased down for questionable activity)
+",0.6777777777777778,0.00888888888888888,Positive
+5,"
+Exactly how many possible IP numbers are there? The exact number is 232 (because the address is comprised of 32 bits), which is a number higher than 4 billion
+","
+Exactly how many possible IP numbers are there? The exact number is 232 (because the address is comprised of 32 bits), which is a number higher than 4 billion
+",0.5,0.25,Positive
+8," What are some remedies for the address depletion?
+First, a particular site can use DHCP and assign IP numbers temporarily for the duration of their use
+"," What are some remedies for the address depletion?
+First, a particular site can use DHCP and assign IP numbers temporarily for the duration of their use
+",0.3333333333333333,0.20833333333333331,Positive
+14,"16 subnets are to be used for hosts talking within a particular network
+","16 subnets are to be used for hosts talking within a particular network
+",0.3333333333333333,0.16666666666666666,Positive
+17,"
+Okay, go ahead and smirk now; some of you did know your IP address
+","
+Okay, go ahead and smirk now; some of you did know your IP address
+",0.5,0.5,Positive
+18," That is good
+"," That is good
+",0.6000000000000001,0.7,Positive
+19," However, do you know your host's MAC address by heart? The answer would most likely be ""no,"" because almost no one knows his MAC address
+"," However, do you know your host's MAC address by heart? The answer would most likely be ""no,"" because almost no one knows his MAC address
+",0.75,0.25,Positive
+20," There are several reasons for this, but the primary one is that a 48-bit address with no provisions for human memorization is hard to lock into the brain
+"," There are several reasons for this, but the primary one is that a 48-bit address with no provisions for human memorization is hard to lock into the brain
+",0.28541666666666665,0.027083333333333334,Positive
+21,"
+The Address Resolution Protocol (ARP) enables you to resolve the translation of physical MAC addresses to logical IP addresses
+","
+The Address Resolution Protocol (ARP) enables you to resolve the translation of physical MAC addresses to logical IP addresses
+",0.19642857142857142,0.125,Positive

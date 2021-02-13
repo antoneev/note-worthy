@@ -1,0 +1,28 @@
+,0,Sentences,Subjectivity,Polarity,Analysis
+0,"DHCP is a protocol that permits dynamic assignment of IP numbers
+","DHCP is a protocol that permits dynamic assignment of IP numbers
+",0.16666666666666666,0.0,Neutral
+2," DHCP allows the centralization and automation of the IP assignment process
+"," DHCP allows the centralization and automation of the IP assignment process
+",0.0,0.0,Neutral
+11," The governing body of the Internet, the Internet Address Numbers Authority (IANA), has set aside blocks of IP addresses to be used for internal addresses only
+"," The governing body of the Internet, the Internet Address Numbers Authority (IANA), has set aside blocks of IP addresses to be used for internal addresses only
+",0.5,0.0,Neutral
+12," For instance, the 192
+"," For instance, the 192
+",0.0,0.0,Neutral
+13,"168 and 172
+","168 and 172
+",0.0,0.0,Neutral
+15," This traffic should not leave the site's gateway
+"," This traffic should not leave the site's gateway
+",0.0,0.0,Neutral
+22," ARP is not an IP protocol per se; it is the process of sending an Ethernet frame to all systems on the same network segment
+"," ARP is not an IP protocol per se; it is the process of sending an Ethernet frame to all systems on the same network segment
+",0.125,0.0,Neutral
+23," This is known as a broadcast
+"," This is known as a broadcast
+",0.0,0.0,Neutral
+24," If a message is a broadcast message, it is sent to all the machines on part of or the entire
+"," If a message is a broadcast message, it is sent to all the machines on part of or the entire
+",0.625,0.0,Neutral

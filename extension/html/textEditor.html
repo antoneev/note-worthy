@@ -12,25 +12,24 @@
 
 
     <div class="bg-gray-100">
-      <header class="text-gray-600 body-font">
+      <header class="text-gray-600 body-font" style="box-shadow: 0 0 2px 0 gray;">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <img
             class="w-10"
             src="https://img.icons8.com/carbon-copy/100/000000/video-conference.png"
           />
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span class="ml-3 text-xl">Call Study</span>
+          <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span id="projectName" class="ml-3 text-xl"><bold>Call Study</bold></span>
           </a>
-          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900">Home</a>
-            <a class="mr-5 hover:text-gray-900">Quiz</a>
-            <a class="mr-5 hover:text-gray-900">ChatBot</a>
+          <nav id="navLinks" class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="#" class="mr-5 hover:text-gray-900">Dashboard</a>
+            <a href="#" class="mr-5 hover:text-gray-900">Quiz</a>
+            <a href="#" class="mr-5 hover:text-gray-900">Report</a>
           </nav>
 
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900">Welcome Antone Evans!</a>
-          </nav>
-          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0">
+            <a id="welcomeUser" class="mr-5 hover:text-gray-900">Welcome <b>Antone Evans!</b></a>
+          <button id="logoutButton" class="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0" style="margin-top: 20px;margin-right: 10px;">
             logout
             <svg
               fill="none"
@@ -47,6 +46,7 @@
         </div>
       </header>
     </div>
+  </nav>
 
     <!-- <div class="navbar">
       <img src="../assets/logo-white.png" alt="Logo White" />
@@ -75,7 +75,7 @@
         <span style="color: #585858; margin-left: 10px; font-size: 1rem"
           ></span
         >
-        <button type="submit" id="sendText" class="button w-auto h-12 px-6 pb-10 transition-colors duration-150 rounded-lg focus:shadow-outline">
+        <button type="submit" id="sendText" class="button transition-colors duration-150 rounded-lg focus:shadow-outline">
           Generate Notes for the Meeting
         </button>
         <p id="error"></p>

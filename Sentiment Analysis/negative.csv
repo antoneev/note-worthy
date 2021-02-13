@@ -1,0 +1,16 @@
+,0,Sentences,Subjectivity,Polarity,Analysis
+6," But, every single IP number is not available; reserved ranges decrease the possible numbers
+"," But, every single IP number is not available; reserved ranges decrease the possible numbers
+",0.5380952380952381,-0.09047619047619049,Negative
+7," With the explosive growth of the Internet worldwide, the sad realization has dawned that the IP addresses are being rapidly depleted
+"," With the explosive growth of the Internet worldwide, the sad realization has dawned that the IP addresses are being rapidly depleted
+",1.0,-0.5,Negative
+9," This means that not all hosts will be active at any given time and a smaller pool of possible IP numbers is required
+"," This means that not all hosts will be active at any given time and a smaller pool of possible IP numbers is required
+",0.7000000000000001,-0.044444444444444446,Negative
+10," The other remedy is something known as reserved private addresses
+"," The other remedy is something known as reserved private addresses
+",0.375,-0.0625,Negative
+16," This allows a site with an insufficient number of IP addresses to use these Class B network addresses for internal purposes and to save the assigned IP addresses for other purposes
+"," This allows a site with an insufficient number of IP addresses to use these Class B network addresses for internal purposes and to save the assigned IP addresses for other purposes
+",0.1875,-0.0625,Negative

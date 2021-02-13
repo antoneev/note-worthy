@@ -2,9 +2,9 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import MainSection from '../../../app/components/MainSection';
-import style from '../../../app/components/MainSection.css';
-import TodoItem from '../../../app/components/TodoItem';
+import MainSection from '../../../app/components/unused/MainSection';
+import style from '../../../app/components/unused/MainSection.css';
+import TodoItem from '../../../app/components/unused/TodoItem';
 import Footer from '../../../app/components/Footer';
 import { SHOW_ALL, SHOW_COMPLETED } from '../../../app/constants/TodoFilters';
 

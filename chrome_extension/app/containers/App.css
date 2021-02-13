@@ -1,39 +1,117 @@
-.normal {
-  background: #fff;
-  margin: 200px 0 40px 0;
-  position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+body{
+  font-family: Helvetica, sans-serif;
 }
 
-.normal input::-webkit-input-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
+body.live-caption-popup{
+  width: 300px;
+  height: 420px;
+  margin: 0;
 }
 
-.normal input::-moz-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
+img{
+  display: block;
+  margin: 20px auto;
+  width: 30%;
 }
 
-.normal input::input-placeholder {
-  font-style: italic;
-  font-weight: 300;
-  color: #e6e6e6;
-}
-
-.normal h1 {
-  position: absolute;
-  top: -155px;
-  width: 100%;
-  font-size: 100px;
-  font-weight: 100;
+h2.live-caption-title{
+  color: rgb(52, 51, 53);
   text-align: center;
-  color: rgba(175, 47, 47, 0.15);
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  margin: 0;
 }
+
+.content-container, header{
+  display: block;
+  margin: 0px auto;
+  width: 75%;
+  text-align: center;
+}
+
+header{
+  margin-bottom: 2em;
+}
+
+header p{
+  color: rgb(115, 116, 118);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button{
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  box-shadow: none;
+  background: rgb(244, 244, 245);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  width: 33%;
+  text-align: center;
+}
+
+p.error-message:empty{
+  display: none;
+}
+
+p.error-message{
+  color:#fb2d2d;
+  font-style: italic;
+  font-size: 11px;
+  margin-top: 1em;
+}
+
+label{
+  color: rgb(52, 51, 53);
+  display: block;
+  margin-bottom: 1em;
+  font-size: 12px;
+}
+
+.language-select-element{
+  position: relative;
+  margin-bottom: 1em;
+}
+
+select{
+  border: 1px solid lightgrey;
+  font-size: 12px;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.language-select-element:after{
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  top: 2.1em;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  pointer-events: none;
+}
+
+.live-caption{
+  bottom: '10px';
+  left: 0;
+  text-align: 'center';
+  background-color: 'rgba(0,0,0,0.8)';
+  position: 'absolute';
+  color: 'white';
+  padding: '10px';
+  font-size: '30px';
+  width: '50%';
+  transform: 'translate(50%)';
+  border: '2px solid white';
+  border-radius: "5px";
+  z-index: "10000";
+  font-family: "Arial";
+}
+

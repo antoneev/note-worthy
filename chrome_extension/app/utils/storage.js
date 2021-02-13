@@ -5,8 +5,9 @@ function saveState(state) {
 // todos unmarked count
 function setBadge(todos) {
   if (chrome.browserAction) {
-    const count = todos.filter(todo => !todo.marked).length;
-    chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
+    // TODO - PAWAN: Change the icon to recording when session starts
+    // const count = todos.filter(todo => !todo.marked).length;
+    // chrome.browserAction.setBadgeText({ text: count > 0 ? count.toString() : '' });
   }
 }
 

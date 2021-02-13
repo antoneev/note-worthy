@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import TodoTextInput from '../../../app/components/TodoTextInput';
-import style from '../../../app/components/TodoTextInput.css';
+import SessionNameInput from '../../../app/components/SessionNameInput';
+import style from '../../../app/components/SessionNameInput.css';
 
 function setup(propOverrides) {
   const props = {
@@ -17,7 +17,7 @@ function setup(propOverrides) {
 
   const renderer = TestUtils.createRenderer();
 
-  renderer.render(<TodoTextInput {...props} />);
+  renderer.render(<SessionNameInput {...props} />);
 
   let output = renderer.getRenderOutput();
 

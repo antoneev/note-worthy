@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import Header from '../../../app/components/Header';
-import TodoTextInput from '../../../app/components/TodoTextInput';
+import SessionNameInput from '../../../app/components/SessionNameInput';
 
 function setup() {
   const props = {
@@ -28,7 +28,7 @@ describe('todoapp Header component', () => {
     expect(h1.type).to.equal('h1');
     expect(h1.props.children).to.equal('todos');
 
-    expect(input.type).to.equal(TodoTextInput);
+    expect(input.type).to.equal(SessionNameInput);
     expect(input.props.newTodo).to.equal(true);
     expect(input.props.placeholder).to.equal('What needs to be done?');
   });

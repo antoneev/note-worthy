@@ -2,8 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
-import MainSection from '../components/MainSection';
-import * as TodoActions from '../actions/todos';
+import Footer from '../components/Footer';
+import MainSection from '../components/unused/MainSection';
+import * as ClassRoomActions from '../actions/classroom';
 import style from './App.css';
 
 @connect(
@@ -11,7 +12,7 @@ import style from './App.css';
     todos: state.todos
   }),
   dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch)
+    actions: bindActionCreators(ClassRoomActions, dispatch)
   })
 )
 export default class App extends Component {
@@ -23,11 +24,12 @@ export default class App extends Component {
 
   render() {
     const { todos, actions } = this.props;
+    const { sessionName, started, saving } = todos;
 
     return (
-      <div className={style.normal}>
-        <Header addTodo={actions.addTodo} />
-        <MainSection todos={todos} actions={actions} />
+      <div>
+        <Header addSession={actions.addSession} />
+        <Footer sessionName={sessionName} started={started} saving={saving} actions={actions} />
       </div>
     );
   }

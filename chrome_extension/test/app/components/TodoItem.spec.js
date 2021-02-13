@@ -2,9 +2,9 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import TodoItem from '../../../app/components/TodoItem';
-import style from '../../../app/components/TodoItem.css';
-import TodoTextInput from '../../../app/components/TodoTextInput';
+import TodoItem from '../../../app/components/unused/TodoItem';
+import style from '../../../app/components/unused/TodoItem.css';
+import SessionNameInput from '../../../app/components/SessionNameInput';
 
 function setup(editing = false) {
   const props = {
@@ -87,7 +87,7 @@ describe('todoapp TodoItem component', () => {
     expect(output.props.className).to.equal(style.editing);
 
     const input = output.props.children;
-    expect(input.type).to.equal(TodoTextInput);
+    expect(input.type).to.equal(SessionNameInput);
     expect(input.props.text).to.equal('Use Redux');
     expect(input.props.editing).to.equal(true);
   });

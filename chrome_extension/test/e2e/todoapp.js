@@ -3,9 +3,9 @@ import webdriver from 'selenium-webdriver';
 import { expect } from 'chai';
 import { delay, startChromeDriver, buildWebDriver } from '../func';
 import footerStyle from '../../app/components/Footer.css';
-import mainSectionStyle from '../../app/components/MainSection.css';
-import todoItemStyle from '../../app/components/TodoItem.css';
-import todoTextInputStyle from '../../app/components/TodoTextInput.css';
+import mainSectionStyle from '../../app/components/unused/MainSection.css';
+import todoItemStyle from '../../app/components/unused/TodoItem.css';
+import todoTextInputStyle from '../../app/components/SessionNameInput.css';
 import manifest from '../../chrome/manifest.prod.json';
 
 const extensionName = manifest.name;

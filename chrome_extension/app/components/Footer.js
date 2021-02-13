@@ -3,88 +3,37 @@ import classnames from 'classnames';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters';
 import style from './Footer.css';
 
-const FILTERS = [SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED];
-const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
-  [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
-};
 
 export default class Footer extends Component {
 
   static propTypes = {
-    completedCount: PropTypes.number.isRequired,
-    activeCount: PropTypes.number.isRequired,
-    filter: PropTypes.string.isRequired,
-    onClearCompleted: PropTypes.func.isRequired,
-    onShow: PropTypes.func.isRequired
+    sessionName: PropTypes.string.isRequired,
+    started: PropTypes.bool.isRequired,
+    saving: PropTypes.bool.isRequired,
+    actions: PropTypes.object.isRequired,
   };
 
-  constructor(props, context) {
-    super(props, context);
-    if (props.onShow) {
-      this.filterHandlers = FILTERS.map(filter => () => props.onShow(filter));
+  handleStart = () => {
+    const { sessionName, startSession } = this.props.actions;
+    console.log('{PAWAN} sessionName: ', sessionName);
+    if (sessionName) {
+      startSession(sessionName);
     }
-  }
+  };
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.onShow) {
-      this.filterHandlers = FILTERS.map(filter => () => nextProps.onShow(filter));
-    }
-  }
+  handleStop = () => {
+    const { stopSession } = this.props.actions;
+    stopSession();
+  };
 
-  renderTodoCount() {
-    const { activeCount } = this.props;
-    const itemWord = activeCount === 1 ? 'item' : 'items';
-
-    return (
-      <span className={style.todoCount}>
-        <strong>{activeCount || 'No'}</strong> {itemWord} left
-      </span>
-    );
-  }
-
-  renderFilterLink(filter, handler) {
-    const title = FILTER_TITLES[filter];
-    const { filter: selectedFilter } = this.props;
-
-    return (
-      <a
-        className={classnames({ selected: filter === selectedFilter })}
-        style={{ cursor: 'hand' }}
-        onClick={handler}
-      >
-        {title}
-      </a>
-    );
-  }
-
-  renderClearButton() {
-    const { completedCount, onClearCompleted } = this.props;
-    if (completedCount > 0) {
-      return (
-        <button
-          className={style.clearCompleted}
-          onClick={onClearCompleted}
-        >
-          Clear completed
-        </button>
-      );
-    }
-  }
+  handleDashboard = () => {};
 
   render() {
     return (
-      <footer className={style.footer}>
-        {this.renderTodoCount()}
-        <ul className={style.filters}>
-          {FILTERS.map((filter, i) =>
-            <li key={filter}>
-              {this.renderFilterLink(filter, this.filterHandlers[i])}
-            </li>
-          )}
-        </ul>
-        {this.renderClearButton()}
+      <footer className={style.buttonsContainer}>
+        <button onClick={this.handleStart} type="activation-button">START</button>
+        <button onClick={this.handleStop} type="deactivation-button">STOP</button>
+        <button onClick={this.handleDashboard} type="dashboard-button">DASHBOARD</button>
       </footer>
     );
   }

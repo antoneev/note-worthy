@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallStudy - Edit your Meeting Text</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/textEditor.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+
+
+    <div class="bg-gray-100">
+      <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <img
+            class="w-10"
+            src="https://img.icons8.com/carbon-copy/100/000000/video-conference.png"
+          />
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-xl">Call Study</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Home</a>
+            <a class="mr-5 hover:text-gray-900">Quiz</a>
+            <a class="mr-5 hover:text-gray-900">ChatBot</a>
+          </nav>
+
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Welcome Antone Evans!</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-100 rounded text-base mt-4 md:mt-0">
+            logout
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <!-- <div class="navbar">
+      <img src="../assets/logo-white.png" alt="Logo White" />
+    </div> -->
+    <div class="content">
+      <div>
+        <h1>Class Conversation Recording</h1>
+        <textarea
+          id="meetingText"
+          placeholder="(Meeting text will appear here)"
+        ></textarea>
+      </div>
+      <form id="submit-meeting-details" class="right-content">
+        <p>
+          Class Name here:&nbsp;
+          <input
+            id="title"
+            type="text"
+            name="meeting-agenda"
+            placeholder="Please enter the name of class"
+            required
+          />
+        </p>
+        <p>Class Duration in minutes: &nbsp;<span id="duration"></span></p>
+        <p>Acuracy in percentage: &nbsp;<span id="score"></span></p>
+        <span style="color: #585858; margin-left: 10px; font-size: 1rem"
+          ></span
+        >
+        <button type="submit" id="sendText" class="button w-auto h-12 px-6 pb-10 transition-colors duration-150 rounded-lg focus:shadow-outline">
+          Generate Notes for the Meeting
+        </button>
+        <p id="error"></p>
+      </form>
+    </div>
+    <div class="message">
+      <lottie-player
+        src="https://assets4.lottiefiles.com/packages/lf20_pmYw5P.json"
+        background="transparent"
+        speed="0.5"
+        style="width: 250px; height: 250px"
+        autoplay
+      ></lottie-player>
+      <h1>Hey there, Thanks for using StandNote &#128516;</h1>
+      <p style="line-height: 1.5">
+        We've recieved your meeting's text. We'll notify you once your meeting
+        notes are ready!
+        <br />
+        Till then, Happy Meetings :)
+      </p>
+    </div>
+    <script src="../javascript/textEditor.js"></script>
+  </body>
+</html>

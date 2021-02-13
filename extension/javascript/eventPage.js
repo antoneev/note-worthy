@@ -8,7 +8,7 @@ let tabStream,
   output,
   audioConfig,
   recognizer,
-  text = '',
+  text = "",
   score = 0,
   micable = true,
   paused = false,
@@ -21,10 +21,10 @@ const constraints = {
 
 // azure speech configurations
 const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(
-  '4bc1dcdc604e4e0bb10b90fd93696fc3 ',
-  'eastus'
+  "4bc1dcdc604e4e0bb10b90fd93696fc3",
+  "eastus"
 );
-speechConfig.speechRecognitionLanguage = 'en-IN';
+speechConfig.speechRecognitionLanguage = "en-IN";
 speechConfig.outputFormat = 1;
 
 // get tab audio
@@ -65,13 +65,13 @@ function getTabAudio() {
     };
 
     recognizer.sessionStopped = (s, e) => {
-      console.log('\n Session stopped event.');
+      console.log("\n Session stopped event.");
       recognizer.stopContinuousRecognitionAsync();
-      chrome.browserAction.setIcon({ path: '../assets/icon48.png' });
+      chrome.browserAction.setIcon({ path: "../assets/icon48.png" });
 
-      chrome.storage.sync.get('email', (data) => {
-        const newWindow = window.open('../html/textEditor.html');
-        newWindow.text = text.replace('undefined', '');
+      chrome.storage.sync.get("email", (data) => {
+        const newWindow = window.open("../html/textEditor.html");
+        newWindow.text = text.replace("undefined", "");
         newWindow.email = data.email;
         newWindow.duration = duration;
         newWindow.confidenceScore = (100 * score).toFixed(2);
@@ -88,7 +88,7 @@ function reloadBackgroundScript() {
 }
 
 function cancelStream() {
-  chrome.browserAction.setIcon({ path: '../assets/icon48.png' });
+  chrome.browserAction.setIcon({ path: "../assets/icon48.png" });
   reloadBackgroundScript();
 }
 
@@ -106,7 +106,7 @@ function getMicAudio() {
 // start recording the stream
 function startRecord() {
   setTimeout(() => {
-    chrome.browserAction.setIcon({ path: '../assets/icon_red.png' });
+    chrome.browserAction.setIcon({ path: "../assets/icon_red.png" });
     getMicAudio();
   }, 3000);
 }
@@ -148,19 +148,19 @@ function stopRecord(totalTime) {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch (request.type) {
-    case 'record':
+    case "record":
       startRecord();
       break;
-    case 'stop':
+    case "stop":
       stopRecord(request.duration);
       break;
-    case 'pause':
+    case "pause":
       pauseResumeRecord();
       break;
-    case 'mute':
+    case "mute":
       muteMic();
       break;
-    case 'cancel':
+    case "cancel":
       cancelStream();
       break;
     default:

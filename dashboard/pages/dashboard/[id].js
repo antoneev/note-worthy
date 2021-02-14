@@ -84,11 +84,19 @@ export default function note() {
             Summary of Above transcript
           </h3>
 
-          <textarea
-            id="meetingText"
-            placeholder="(Once the class ends, summary will appear here!)"
-            value={data.summary}
-          ></textarea>
+          <div className="flex flex-row">
+            <textarea
+              className="w-3/4"
+              id="meetingText"
+              placeholder="(Once the class ends, summary will appear here!)"
+              value={data.summary}
+            ></textarea>
+
+            <div className="pl-5  rounded-lg">
+              <img className="rounded-xl " src={data.image} />
+            </div>
+          </div>
+
           <div>
             {/* {ques.map((e) => (
               <div key={e.id} className="p-4 lg:w-1/3">

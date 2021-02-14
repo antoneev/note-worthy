@@ -14,7 +14,24 @@ textarea {
   line-height: 1.5;
 }
 
+textarea .t1 {
+  width: 700px;
+  height: 300px;
+  padding: 10px 16px;
+  display: block;
+  margin: auto;
+  border-radius: 6px;
+  border: 1px solid #c6c6c6;
+  resize: none;
+  line-height: 1.5;
+}
+
 textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(31 154 219 / 40%);
+}
+
+textarea .t1:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgb(31 154 219 / 40%);
 }

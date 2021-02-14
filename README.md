@@ -12,7 +12,7 @@
 > One of the problems currently faced by students around the world is the new way of learning, virtual learning. This leaves teachers with the age long problem of how to keep students engaged.
 
 
-## What it does
+## 👌 What it does
 - Increase Engagement
 - Pre-made Questions
 - Study Guide Creation
@@ -20,24 +20,26 @@
 - Lesson and Lesson Summaries Transcript
 - Archive of Information
 
+## How we built it
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/flowdiag.png" >
 
-
-## How we built it
-
 ## Challenges we ran into
+- Handeling background processes in Chrome Extension
+- Generating realtime quizes after some fixed intervel of time
+- Generating summary of the transcript
+- integrating chatbot
 
 ## Accomplishments that we're proud of
 
 ## What we learned
+- how the background processes work in an chrome extension
+- integrating chatbot into a website
 
 ## What's next for Note-Worthy
 - Allowing teachers to prompt a quiz on demand 
 - Assist students by identifying weaknesses and providing resources
 - Adding Lecture Insights for  Webcam on sessions
 - Connecting chat with Google Assistant & Amazon Alexa 
-
-
 
 
 ## 💡 features

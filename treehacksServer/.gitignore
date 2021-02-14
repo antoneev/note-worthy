@@ -1,0 +1,9 @@
+# Directories
+.idea
+__pycache__
+embeddings
+media
+
+# Files
+.python-version
+.DS_Store

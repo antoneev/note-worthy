@@ -62,7 +62,7 @@ h1 {
 
 textarea {
   width: 680px;
-  height: 600px;
+  height: 200px;
   padding: 10px 16px;
   display: block;
   margin: auto;
@@ -95,10 +95,6 @@ button:focus {
   outline: none;
 }
 
-button:hover {
-  background: #7b7b7b;
-}
-
 .right-content {
   display: flex;
   flex-direction: column;
@@ -129,7 +125,6 @@ p {
   width: 80%;
   margin: auto;
   text-align: center;
-  display: none;
 }
 
 .message h1 {

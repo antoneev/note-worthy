@@ -42,7 +42,13 @@ function login() {
     });
 }
 
-
+function getHeaders() {
+  return {
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "application/json",
+    "Authorization": "Token fb1a40839a88eff4e966e2aff720cf2d1deeca4e",
+  };
+}
 
 function addRecordListener() {
   const startBtn = document.getElementById("start-record");
@@ -59,8 +65,25 @@ function addRecordListener() {
     }
   });
 
-  startBtn.addEventListener("click", () => {
-    chrome.runtime.sendMessage({ type: "record" });
+  startBtn.addEventListener("click", async () => {
+    const sessionNameInput = document.getElementById("session-name");
+    const sessionName = sessionNameInput.value;
+
+    // API - Create session
+    const res = await fetch(
+        "https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/create/",
+        {
+          method: "POST",
+          headers: getHeaders(),
+          body: JSON.stringify({
+            session_name: sessionName,
+          }),
+        }
+    );
+    const responseJson = await res.json();
+    chrome.storage.sync.set({ sessionName: sessionName, sessionId: responseJson.id });
+
+    chrome.runtime.sendMessage({ type: "record", sessionName: sessionName, sessionId: responseJson.id });
 
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { type: "record" }, () => {

@@ -135,12 +135,15 @@ class MainQuiz extends React.Component {
         </div>
       );
     } else {
+      // TODO:
+      // if (this.state.currentQuestion == 0) {
+      //   return <div>Welcome to the quiz</div>;
+      // }
       return (
         <div className="App w-1/2">
           <h1 className="font-semibold text-3xl">{this.state.questions} </h1>
-          <span className="font-normal text-1xl pb-5">{`Question ${
-            this.state.currentQuestion + 1
-          } / ${quizData.length} remaining `}</span>
+          <span className="font-normal text-1xl pb-5">{`Question ${this.state
+            .currentQuestion + 1} / ${quizData.length} remaining `}</span>
           {options.map((option) => (
             <p
               key={option.id}

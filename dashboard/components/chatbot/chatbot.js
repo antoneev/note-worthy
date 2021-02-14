@@ -4,8 +4,6 @@ import ChatBot, { Loading } from "react-simple-chatbot";
 import axios from "axios";
 
 class DBPedia extends Component {
-  getAnswers() {}
-
   constructor(props) {
     super(props);
 
@@ -22,8 +20,10 @@ class DBPedia extends Component {
 
   componentWillMount() {
     const self = this;
-    const { steps } = this.props;
+    const { steps, id } = this.props;
     const search = steps.search.value;
+
+    console.log(`iiii ${id}`);
     // const endpoint = encodeURI("https://dbpedia.org");
     // const query = encodeURI(`
     //   select * where {
@@ -47,7 +47,7 @@ class DBPedia extends Component {
           },
         };
         const response = await axios.post(
-          "https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/chatbot/3/",
+          `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/chatbot/${id}/`,
           {
             question: search,
           },
@@ -134,8 +134,7 @@ const config = {
   height: "400px",
   floating: true,
 };
-
-const ExampleDBPedia = () => (
+const ExampleDBPedia = ({ id }) => (
   <ChatBot
     steps={[
       {
@@ -150,7 +149,7 @@ const ExampleDBPedia = () => (
       },
       {
         id: "3",
-        component: <DBPedia />,
+        component: <DBPedia id={id} />,
         waitAction: true,
         trigger: "1",
       },

@@ -70,7 +70,7 @@ export default function note() {
     <div>
       <div className="flex flex-row">
         <SideBar />
-        <div className="p-10 m-auto">
+        <div className="pl-10 p-10 m-auto">
           <h1 className="pb-0 font-semibold text-2xl">
             Class Conversation Recording
           </h1>
@@ -80,22 +80,30 @@ export default function note() {
             placeholder="(Meeting text will appear here)"
             value={data.transcript}
           ></textarea>
-          <h3 className="pt-10 pb-1 font-medium text-purple-700 text-1xl">
+          <h3 className="pl-10 pt-10 pb-1 font-medium text-purple-700 text-1xl">
             Summary of Above transcript
           </h3>
 
-          <div className="flex flex-row">
-            <textarea
-              className="w-3/4"
-              id="meetingText"
-              placeholder="(Once the class ends, summary will appear here!)"
-              value={data.summary}
-            ></textarea>
+          <textarea
+            id="meetingText"
+            placeholder="(Once the class ends, summary will appear here!)"
+            value={data.summary}
+          ></textarea>
 
-            <div className="pl-5  rounded-lg">
-              <img className="rounded-xl " src={data.image} />
-            </div>
+          <div className="pt-5 pb-5 flex flex-row rounded-lg">
+            <img
+              className="w-1/2 rounded-xl pl-3 pr-1"
+              src="https://media.discordapp.net/attachments/809868221532471356/810568960528482374/sub_vs_pol.png?width=790&height=678"
+            />
+            <img
+              className="w-1/2 rounded-xl pl-3 pr-1"
+              src="https://media.discordapp.net/attachments/809868221532471356/810568978199871530/sentiment_analysis.png?width=790&height=678"
+            />
           </div>
+          <img
+            className="w-1/2 rounded-xl pl-3 pr-1"
+            src="https://media.discordapp.net/attachments/809868221532471356/810568986453606430/lineplot.png?width=790&height=678"
+          />
 
           <div>
             {/* {ques.map((e) => (

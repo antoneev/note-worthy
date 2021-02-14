@@ -75,8 +75,8 @@
 |   | Vercel.app  |  Spacy en_core_web_sm |
 |   | React-Toast-Notifications  | Gensim  |
 |   | React-Simple-Chatbot  | Regular Expression  |
-|   | React-Loader-Spinner  |        |
-|   |   | Note-Worthy Chatbot  |
+|   | React-Loader-Spinner  |  Note-Worthy Chatbot       |
+|   |   |  |
 
 <!---
 ##### :robot: Backend

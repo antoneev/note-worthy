@@ -8,6 +8,8 @@ import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 
 export default function homeBody() {
+  const MAX_LENGTH = 250;
+
   const router = useRouter();
 
   const { addToast } = useToasts();
@@ -83,7 +85,11 @@ export default function homeBody() {
                 >
                   <HomeCard
                     session_name={e.session_name}
-                    transcript={e.transcript}
+                    transcript={
+                      e.transcript.length > MAX_LENGTH
+                        ? e.transcript.substring(0, MAX_LENGTH) + " ...."
+                        : e.transcript
+                    }
                   />
                 </button>
               </div>

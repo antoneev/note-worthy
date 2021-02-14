@@ -3,8 +3,8 @@
 }
 
 textarea {
-  width: 680px;
-  height: 600px;
+  width: 1100px;
+  /* height: 600px; */
   padding: 10px 16px;
   display: block;
   margin: auto;
@@ -17,4 +17,47 @@ textarea {
 textarea:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgb(31 154 219 / 40%);
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.options {
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.selected {
+  background: #36327d !important;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.resultTable {
+  padding: 20px 100px 20px 100px;
+}
+
+button {
+  /* background-color: #36327d; Green */
+  border: none;
+  color: white;
+  /* padding: 15px 32px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 05%;
+}
+
+button:hover {
+  background-color: #c6c6c6;
+}
+
+#correctAnswer {
+  font-weight: bold;
 }

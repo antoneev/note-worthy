@@ -15,6 +15,17 @@
 
 
 ## 💻 samples:
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img1.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img2.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img3.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img4.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img5.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img7.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img8.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img9.png">
+
+
 
 
 ## 👣 steps to run the project

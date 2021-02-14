@@ -11,7 +11,7 @@ export default function note() {
   const { id } = router.query;
 
   const { addToast } = useToasts();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
 
   const getNote = async () => {
@@ -26,7 +26,7 @@ export default function note() {
         config
       );
 
-      console.log(response);
+      // console.log(response);
 
       addToast(`Notes Loaded successfully!`, {
         appearance: "success",
@@ -34,6 +34,7 @@ export default function note() {
       });
 
       setData(response.data);
+
       setLoading(false);
       console.log(response.data);
     } catch (err) {
@@ -49,7 +50,8 @@ export default function note() {
 
   useEffect(() => {
     getNote();
-    console.log(data);
+    // console.log(data);
+    // console.log(`qqqq ${data.questions}`);
   }, []);
 
   if (loading) return <div>loading...</div>;
@@ -69,7 +71,8 @@ export default function note() {
             value={data.transcript}
           ></textarea>
           <div className="pt-14">
-            <MainQuiz yo="yes" />
+            {/* <div>{data.questions[0].id}</div> */}
+            {/* <MainQuiz questions={[]} /> */}
           </div>
         </div>
       </div>

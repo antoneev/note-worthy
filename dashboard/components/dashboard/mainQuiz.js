@@ -18,12 +18,17 @@ class MainQuiz extends React.Component {
         questions: quizData[this.state.currentQuestion].question,
         answer: quizData[this.state.currentQuestion].answer,
         options: quizData[this.state.currentQuestion].options,
+
+        questions: this.state.props.questions[this.state.currentQuestion].text,
+        answer: this.state.props.questions[this.state.currentQuestion].options[
+          this.state.props.questions[this.state.currentQuestion].answerIndex
+        ],
+        options: this.state.props.questions[this.state.currentQuestion].options,
       };
     });
   };
 
   componentDidMount() {
-    console.log(this.props.yo);
     this.loadQuizData();
   }
   nextQuestionHandler = () => {

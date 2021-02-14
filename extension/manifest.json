@@ -36,12 +36,14 @@
   
     "web_accessible_resources": ["assets/*"],
   
-    "content_security_policy": "script-src 'self' https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js; object-src 'self'",
+    "content_security_policy": "script-src 'self' https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js; https://unpkg.com/axios/dist/axios.min.js; object-src 'self'",
   
     "permissions": [
       "storage",
       "identity",
       "<all_urls>",
+      "https://treehacks-server-oj3ri.ondigitalocean.app/*",
+      "https://unpkg.com/axios/dist/axios.min.js",
       "tabs",
       "tabCapture"
     ]

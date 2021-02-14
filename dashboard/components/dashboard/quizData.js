@@ -2,7 +2,7 @@ export const quizData = [
   {
     id: 0,
     question: ` What is the Capital Of India ?`,
-    options: [`New Delhi`, `Mumbai`, `Kolkatta`],
+    options: [`New Delhi`, `Mumbai`, `Kolkatta`, `vvvhv`],
     answer: `New Delhi`,
   },
   {

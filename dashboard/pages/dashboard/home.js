@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../components/dashboard/navbar";
 import HomeBody from "../../components/dashboard/homeBody";
 import SideBar from "../../components/dashboard/sidebar";
 

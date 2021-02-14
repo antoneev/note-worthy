@@ -9,6 +9,7 @@ class MainQuiz extends React.Component {
     score: 0,
     disabled: true,
     isEnd: false,
+    notStart: false,
   };
 
   loadQuizData = () => {
@@ -42,12 +43,6 @@ class MainQuiz extends React.Component {
   };
 
   componentDidMount() {
-    this.props.q.map((e) =>
-      // <div key={e.id} className="p-4 lg:w-1/3">
-      //   {e.id}
-      // </div>
-      console.log(`qwqwqwqw ${e.id}`)
-    );
     this.loadQuizData();
   }
   nextQuestionHandler = () => {
@@ -85,7 +80,7 @@ class MainQuiz extends React.Component {
     this.setState({ myAnswer: answer, disabled: false });
   };
   finishHandler = () => {
-    if (this.state.currentQuestion === quizData.length - 1) {
+    if (this.state.currentQuestion === this.props.q.length - 1) {
       this.setState({
         isEnd: true,
       });
@@ -104,7 +99,8 @@ class MainQuiz extends React.Component {
         <div className="result">
           <h3 className="font-medium text-2xl">
             {" "}
-            Quiz Score: {this.state.score} / {quizData.length} answers correct{" "}
+            Quiz Score: {this.state.score} / {this.props.q.length} answers
+            correct{" "}
           </h3>
           <div className="">
             The correct answers for the quiz are:
@@ -136,45 +132,75 @@ class MainQuiz extends React.Component {
       );
     } else {
       // TODO:
-      // if (this.state.currentQuestion == 0) {
-      //   return <div>Welcome to the quiz</div>;
-      // }
-      return (
-        <div className="App w-1/2">
-          <h1 className="font-semibold text-3xl">{this.state.questions} </h1>
-          <span className="font-normal text-1xl pb-5">{`Question ${this.state
-            .currentQuestion + 1} / ${quizData.length} remaining `}</span>
-          {options.map((option) => (
-            <p
-              key={option.id}
-              className={`pb-2  mt-3 ui floating message options
+      if (this.state.currentQuestion == 0) {
+        return (
+          <div>
+            <div>
+              {this.state.notStart && (
+                <div>Sorry No Questions are available for now!</div>
+              )}
+
+              <button
+                className="bg-indigo-700 p-2 rounded-md"
+                onClick={() => {
+                  if (
+                    this.props.q == null ||
+                    this.props.q.length == 0 ||
+                    this.props.q.length == 1
+                  ) {
+                    this.setState({
+                      notStart: true,
+                    });
+                  } else {
+                    this.setState({
+                      currentQuestion: currentQuestion + 1,
+                    });
+                  }
+                }}
+              >
+                Click to start the quiz!
+              </button>
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div className="App w-1/2">
+            <h1 className="font-semibold text-3xl">{this.state.questions} </h1>
+            <span className="font-normal text-1xl pb-5">{`Question ${this.state
+              .currentQuestion + 1} / ${this.props.q.length} remaining `}</span>
+            {options.map((option) => (
+              <p
+                key={option.id}
+                className={`pb-2  mt-3 ui floating message options
          ${myAnswer === option ? "selected" : null}
          `}
-              onClick={() => this.checkAnswer(option)}
-            >
-              {option}
-            </p>
-          ))}
-          {currentQuestion < quizData.length - 1 && (
-            <button
-              className="ui inverted button pl-5 pr-10 pt-2 mt-4 pb-2 bg-gray-700"
-              disabled={this.state.disabled}
-              onClick={this.nextQuestionHandler}
-            >
-              Next
-            </button>
-          )}
-          {/* //adding a finish button */}
-          {currentQuestion === quizData.length - 1 && (
-            <button
-              className="ui inverted button pl-5 pr-10 pt-2 pb-2 mt-4 bg-gray-700"
-              onClick={this.finishHandler}
-            >
-              Finish
-            </button>
-          )}
-        </div>
-      );
+                onClick={() => this.checkAnswer(option)}
+              >
+                {option}
+              </p>
+            ))}
+            {currentQuestion < this.props.q.length - 1 && (
+              <button
+                className="ui inverted button pl-5 pr-10 pt-2 mt-4 pb-2 bg-gray-700"
+                disabled={this.state.disabled}
+                onClick={this.nextQuestionHandler}
+              >
+                Next
+              </button>
+            )}
+            {/* //adding a finish button */}
+            {currentQuestion === this.props.q.length - 1 && (
+              <button
+                className="ui inverted button pl-5 pr-10 pt-2 pb-2 mt-4 bg-gray-700"
+                onClick={this.finishHandler}
+              >
+                Finish
+              </button>
+            )}
+          </div>
+        );
+      }
     }
   }
 }

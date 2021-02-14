@@ -6,7 +6,7 @@
 - [Note-Worthy Backend](https://treehacks-server-oj3ri.ondigitalocean.app/)
 
 ## Inspiration
-
+> With 3/4 of our team comprised of students, we choose to develop a project inline with education. Due to the novel coronavirus, we have all been forced to learn virtually; however, this is approach does not always work for students. Our inspiration is to create a platform that allows students with different learning styles to easily be accommodated. Auditory students will have the ability to listen to the live lessons as they currently do. Visual students will have the ability to see both entire lecture notes and lecture summaries. Tactile students will have the ability to complete 5-minute quizzes and interact with our chatbot.
 
 ## ❓ Problem Statement
 > One of the problems currently faced by students around the world is the new way of learning, virtual learning. This leaves teachers with the age long problem of how to keep students engaged.
@@ -75,8 +75,8 @@
 |   | Vercel.app  |  Spacy en_core_web_sm |
 |   | React-Toast-Notifications  | Gensim  |
 |   | React-Simple-Chatbot  | Regular Expression  |
-|   | React-Loader-Spinner  | Textblob  |
-|   |   | Note-Worthy Chatbot  |
+|   | React-Loader-Spinner  |  Note-Worthy Chatbot       |
+|   |   |  |
 
 <!---
 ##### :robot: Backend

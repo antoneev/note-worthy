@@ -1,7 +1,11 @@
-import React from "react";
+
+import React, { Component } from "react";
+
+
 
 export default function homeCard({ session_name, transcript }) {
   return (
+  
     <div>
       <div className="w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <div className="flex items-center justify-between">
@@ -61,5 +65,7 @@ export default function homeCard({ session_name, transcript }) {
         </div>
       </div>
     </div>
+    
+    
   );
 }

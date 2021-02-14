@@ -7,8 +7,8 @@ export default function sidebar() {
   return (
     <div>
       <div className="flex flex-col w-64 h-screen px-4 py-8 bgWhite border-r dark:bg-gray-800 dark:border-gray-600">
-        <h2 className="pl-10 text-3xl pb-6 font-semibold text-gray-800 dark:textWhite">
-          Call Study
+        <h2 className="pl-5 text-3xl pb-6 font-semibold text-gray-800 dark:textWhite">
+          Note-Worthy
         </h2>
         <img
           className="w-36 pl-14 pb-3"

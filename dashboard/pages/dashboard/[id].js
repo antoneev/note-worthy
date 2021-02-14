@@ -12,6 +12,7 @@ export default function note() {
 
   const { addToast } = useToasts();
   const [data, setData] = useState({});
+  const [ques, setQues] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const getNote = async () => {
@@ -22,11 +23,11 @@ export default function note() {
         },
       };
       const response = await axios.get(
-        `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/${id}/`,
+        `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/1/`,
         config
       );
 
-      // console.log(response);
+      console.log(`rrrrr ${response}`);
 
       addToast(`Notes Loaded successfully!`, {
         appearance: "success",
@@ -34,9 +35,12 @@ export default function note() {
       });
 
       setData(response.data);
+      setQues(response.data.questions);
+
+      // console.log(ques);
 
       setLoading(false);
-      console.log(response.data);
+      // console.log(`qqqqqqqqqq ${response.data}`);
     } catch (err) {
       console.log(err);
       addToast("Server Error!", {
@@ -44,7 +48,6 @@ export default function note() {
         autoDismiss: true,
       });
       setLoading(false);
-      console.log(err);
     }
   };
 
@@ -71,7 +74,7 @@ export default function note() {
             value={data.transcript}
           ></textarea>
           <div className="pt-14">
-            {/* <div>{data.questions[0].id}</div> */}
+            {/* <div>{ques}</div> */}
             {/* <MainQuiz questions={[]} /> */}
           </div>
         </div>

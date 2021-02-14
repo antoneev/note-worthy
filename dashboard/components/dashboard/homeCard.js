@@ -1,7 +1,11 @@
-import React from "react";
+
+import React, { Component } from "react";
+
+
 
 export default function homeCard() {
   return (
+  
     <div>
       <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
         Class
@@ -59,6 +63,9 @@ export default function homeCard() {
           6
         </span> */}
       {/* </div> */}
+      
     </div>
+    
+    
   );
 }

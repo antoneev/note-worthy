@@ -1,5 +1,7 @@
 import React from "react";
 import HomeCard from "../../components/dashboard/homeCard";
+import CustomChatbot from "../../components/chatbot/CustomChatbot";
+
 
 export default function homeBody() {
   const arr = [1, 2, 3, 4, 5, 99, 9];
@@ -34,6 +36,7 @@ export default function homeBody() {
           </div>
         </div>
       </section>
+      <CustomChatbot />
     </div>
   );
 }

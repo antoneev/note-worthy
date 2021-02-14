@@ -12,23 +12,42 @@ class MainQuiz extends React.Component {
   };
 
   loadQuizData = () => {
-    // console.log(quizData[0].question)
+    // console.log(this.props.ques[0]);
+
+    // {
+
+    // }
     this.setState(() => {
       return {
-        questions: quizData[this.state.currentQuestion].question,
-        answer: quizData[this.state.currentQuestion].answer,
-        options: quizData[this.state.currentQuestion].options,
+        // questions: quizData[this.state.currentQuestion].question,
+        // answer: quizData[this.state.currentQuestion].answer,
+        // options: quizData[this.state.currentQuestion].options,
 
-        questions: this.state.props.questions[this.state.currentQuestion].text,
-        answer: this.state.props.questions[this.state.currentQuestion].options[
-          this.state.props.questions[this.state.currentQuestion].answerIndex
-        ],
-        options: this.state.props.questions[this.state.currentQuestion].options,
+        questions:
+          this.props.q[this.state.currentQuestion] == null
+            ? quizData[this.state.currentQuestion].question
+            : this.props.q[this.state.currentQuestion].text,
+        answer:
+          this.props.q[this.state.currentQuestion] == null
+            ? quizData[this.state.currentQuestion].answer
+            : this.props.q[this.state.currentQuestion].options[
+                this.props.q[this.state.currentQuestion].answerIndex
+              ],
+        options:
+          this.props.q[this.state.currentQuestion] == null
+            ? quizData[this.state.currentQuestion].options
+            : this.props.q[this.state.currentQuestion].options,
       };
     });
   };
 
   componentDidMount() {
+    this.props.q.map((e) =>
+      // <div key={e.id} className="p-4 lg:w-1/3">
+      //   {e.id}
+      // </div>
+      console.log(`qwqwqwqw ${e.id}`)
+    );
     this.loadQuizData();
   }
   nextQuestionHandler = () => {
@@ -52,9 +71,11 @@ class MainQuiz extends React.Component {
       this.setState(() => {
         return {
           disabled: true,
-          questions: quizData[this.state.currentQuestion].question,
-          options: quizData[this.state.currentQuestion].options,
-          answer: quizData[this.state.currentQuestion].answer,
+          questions: this.props.q[this.state.currentQuestion].text,
+          answer: this.props.q[this.state.currentQuestion].options[
+            this.props.q[this.state.currentQuestion].answerIndex
+          ],
+          options: this.props.q[this.state.currentQuestion].options,
         };
       });
     }
@@ -88,7 +109,7 @@ class MainQuiz extends React.Component {
           <div className="">
             The correct answers for the quiz are:
             <ul className="ul">
-              {quizData.map((item, index) => (
+              {this.props.q.map((item, index) => (
                 <li
                   key={index}
                   className="mt-4 ui floating message options"
@@ -96,11 +117,14 @@ class MainQuiz extends React.Component {
                 >
                   <div className="resultTable">
                     {" "}
-                    Question: {item.question}{" "}
+                    Question: {item.text}{" "}
                     <div>
                       {" "}
                       Correct Answer:{" "}
-                      <span id="correctAnswer"> {item.answer} </span>{" "}
+                      <span id="correctAnswer">
+                        {" "}
+                        {item.options[item.answerIndex]}{" "}
+                      </span>{" "}
                     </div>
                   </div>
                 </li>

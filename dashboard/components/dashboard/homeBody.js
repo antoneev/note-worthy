@@ -16,13 +16,15 @@ export default function homeBody() {
     try {
       const config = {
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Token ${localStorage.getItem("token")}`,
+          Authorization: `Token fb1a40839a88eff4e966e2aff720cf2d1deeca4e`,
         },
       };
       const response = await axios.get(
-        "https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/"
+        "https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/",
+        config
       );
+
+      console.log(response);
 
       addToast(`Notes Loaded successfully!`, {
         appearance: "success",
@@ -33,6 +35,7 @@ export default function homeBody() {
       setLoading(false);
       console.log(response.data);
     } catch (err) {
+      console.log(err);
       addToast("Server Error!", {
         appearance: "error",
         autoDismiss: true,
@@ -48,6 +51,7 @@ export default function homeBody() {
   }, []);
 
   const arr = [1, 2, 3, 4, 5, 99, 9];
+  if (loading) return <div>loading...</div>;
   return (
     <div className="pattern bg-gray-100">
       <div className="container px-5 pt-10 mx-auto">
@@ -69,13 +73,16 @@ export default function homeBody() {
       <section className="text-gray-600 body-font">
         <div className="container px-5  pt-10 pb-24 mx-auto">
           <div className="flex flex-wrap -m-4">
-            {arr.map((e) => (
-              <div key={Math.random()} className="p-4 lg:w-1/3">
+            {data.map((e) => (
+              <div key={e.id} className="p-4 lg:w-1/3">
                 <button
-                  onClick={() => router.push(`/dashboard/${Math.random()}`)}
+                  onClick={() => router.push(`/dashboard/${e.id}`)}
                   className="text-justify"
                 >
-                  <HomeCard />
+                  <HomeCard
+                    session_name={e.session_name}
+                    transcript={e.transcript}
+                  />
                 </button>
               </div>
             ))}

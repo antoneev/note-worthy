@@ -23,6 +23,7 @@ class MainQuiz extends React.Component {
   };
 
   componentDidMount() {
+    console.log(this.props.yo);
     this.loadQuizData();
   }
   nextQuestionHandler = () => {
@@ -83,7 +84,11 @@ class MainQuiz extends React.Component {
             The correct answers for the quiz are:
             <ul className="ul">
               {quizData.map((item, index) => (
-                <li className="mt-4 ui floating message options" key={index}>
+                <li
+                  key={index}
+                  className="mt-4 ui floating message options"
+                  key={index}
+                >
                   <div className="resultTable">
                     {" "}
                     Question: {item.question}{" "}

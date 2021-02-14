@@ -1,1 +1,1 @@
-Download the needed embedding fine from [glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip)
+Download the needed model files from our [Google Drive](https://drive.google.com/drive/folders/1Kf9thEcxuBBwiRVKLHmDsryGZIa8Q5H2?usp=sharing)

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function navbar() {
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <img

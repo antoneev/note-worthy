@@ -1,10 +1,55 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import React from "react";
 import HomeCard from "../../components/dashboard/homeCard";
+import { useToasts } from "react-toast-notifications";
+import axios from "axios";
 
 export default function homeBody() {
+  const router = useRouter();
+
+  const { addToast } = useToasts();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const getStartups = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Token ${localStorage.getItem("token")}`,
+        },
+      };
+      const response = await axios.get(
+        "https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/"
+      );
+
+      addToast(`Notes Loaded successfully!`, {
+        appearance: "success",
+        autoDismiss: true,
+      });
+
+      setData(response.data);
+      setLoading(false);
+      console.log(response.data);
+    } catch (err) {
+      addToast("Server Error!", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+      setLoading(false);
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getStartups();
+    console.log(data);
+  }, []);
+
   const arr = [1, 2, 3, 4, 5, 99, 9];
   return (
-    <div className="pattern">
+    <div className="pattern bg-gray-100">
       <div className="container px-5 pt-10 mx-auto">
         <div className="flex flex-wrap w-full ">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -26,9 +71,12 @@ export default function homeBody() {
           <div className="flex flex-wrap -m-4">
             {arr.map((e) => (
               <div key={Math.random()} className="p-4 lg:w-1/3">
-                <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-16 rounded-lg overflow-hidden text-center relative">
+                <button
+                  onClick={() => router.push(`/dashboard/${Math.random()}`)}
+                  className="text-justify"
+                >
                   <HomeCard />
-                </div>
+                </button>
               </div>
             ))}
           </div>

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import HomeCard from "../../components/dashboard/homeCard";
 import CustomChatbot from "../../components/chatbot/CustomChatbot";
+import ChatBot from "../../components/chatbot/chatbot";
 
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
@@ -97,7 +98,7 @@ export default function homeBody() {
           </div>
         </div>
       </section>
-      <CustomChatbot />
+      <ChatBot />
     </div>
   );
 }

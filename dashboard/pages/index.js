@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Login from "./auth/login";
 import Dashboard from "./dashboard/home";
-import "../styles/texteditor.css";
 
 export default function Home() {
   const [isLoggedIn, setLoggedIn] = useState(true);

@@ -1,5 +1,6 @@
 import "tailwindcss/tailwind.css";
 import "../styles/styles.css";
+// import "../styles/texteditor.css";
 import { ToastProvider } from "react-toast-notifications";
 
 function MyApp({ Component, pageProps }) {

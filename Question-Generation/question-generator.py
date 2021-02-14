@@ -8,25 +8,12 @@ from IPython.display import Markdown, display, clear_output
 import _pickle as cPickle
 from pathlib import Path
 
-def dumpPickle(fileName, content):
-    pickleFile = open(fileName, 'wb')
-    cPickle.dump(content, pickleFile, -1)
-    pickleFile.close()
-
 def loadPickle(fileName):    
     file = open(fileName, 'rb')
     content = cPickle.load(file)
     file.close()
     
     return content
-    
-def pickleExists(fileName):
-    file = Path(fileName)
-    
-    if file.is_file():
-        return True
-    
-    return False
 
 
 # ## *Extract all words from plain text and generate it's features*
@@ -35,35 +22,6 @@ def pickleExists(fileName):
 import spacy
 from spacy import displacy
 nlp = spacy.load('en_core_web_sm')
-
-#Extract answers and the sentence they are in
-def extractAnswers(qas, doc):
-    answers = []
-
-    senStart = 0
-    senId = 0
-
-    for sentence in doc.sents:
-        senLen = len(sentence.text)
-
-        for answer in qas:
-            answerStart = answer['answers'][0]['answer_start']
-
-            if (answerStart >= senStart and answerStart < (senStart + senLen)):
-                answers.append({'sentenceId': senId, 'text': answer['answers'][0]['text']})
-
-        senStart += senLen
-        senId += 1
-    
-    return answers
-
-#todo - Clean answers from stopwords?
-def tokenIsAnswer(token, sentenceId, answers):
-    for i in range(len(answers)):
-        if (answers[i]['sentenceId'] == sentenceId):
-            if (answers[i]['text'] == token):
-                return True
-    return False
 
 #Save named entities start points
 
@@ -253,13 +211,9 @@ def sortAnswers(qaPairs):
 import gensim
 from gensim.test.utils import datapath, get_tmpfile
 from gensim.models import KeyedVectors
-
-glove_file = 'data/embeddings/glove.6B.300d.txt'
-tmp_file = 'data/embeddings/word2vec-glove.6B.300d.txt'
-
 from gensim.scripts.glove2word2vec import glove2word2vec
-glove2word2vec(glove_file, tmp_file)
-model = KeyedVectors.load_word2vec_format(tmp_file)
+
+model = KeyedVectors.load('data/embeddings/gloveModel',mmap='r')
 
 
 def generate_distractors(answer, count):

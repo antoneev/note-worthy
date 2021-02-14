@@ -104,6 +104,31 @@ class SentimentAnalysis:
         plt.title("Sentiment Analysis", pad=20)
         # Change location as required
         plt.savefig("/content/drive/MyDrive/Sentiment Analysis/plots/sentiment_analysis.png", pad_inches=0.5)
+        
+        
+        
+    def linePlot(self,df):
+        plt.rcdefaults()
+        plt.rcParams['axes.titlepad'] = 10
+        (fig_width, fig_height) = plt.rcParams['figure.figsize']
+        plt.rcParams['figure.edgecolor'] = 'b'
+        fig_size = [fig_width*1.4 , fig_height*1.6]
+        f = plt.figure(figsize=fig_size, frameon=True)
+        x = [i+1 for i in range(df.shape[0])]
+        y= df['Polarity']
+        ax = plt.gca()
+        ax.tick_params(axis='x', colors='black')
+        ax.tick_params(axis='y', colors='black')
+
+
+        plt.plot(x, y)
+
+
+        plt.ylabel("Polarity", labelpad=10)
+        plt.xlabel("Time (by sentence number)", labelpad=10)
+        plt.title("Sentence Polarity vs Time", pad = 20)
+        #Change location as required
+        plt.savefig("/content/drive/MyDrive/Sentiment Analysis/plots/lineplot.png", pad_inches=0.5)
 
 
 # filename="/content/drive/MyDrive/Sentiment Analysis/demo.txt"
@@ -114,3 +139,4 @@ class SentimentAnalysis:
 # positive, negative, neutral = s.getPolarityStatistics(cleaned_dataset)
 # s.scatterPlot(cleaned_dataset)
 # s.barPlot()
+# s.linePlot(cleaned_dataset)

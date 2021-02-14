@@ -12,32 +12,46 @@
 > One of the problems currently faced by students around the world is the new way of learning, virtual learning. This leaves teachers with the age long problem of how to keep students engaged.
 
 
-## What it does
-<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/flowdiag.png" >
-
+## 👌 What it does
+- Increase Engagement
+- Pre-made Questions
+- Study Guide Creation
+- Feedback on Lectures
+- Lesson and Lesson Summaries Transcript
+- Archive of Information
 
 ## How we built it
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/flowdiag.png" >
 
 ## Challenges we ran into
+- Handeling background processes in Chrome Extension
+- Generating realtime quizes after some fixed intervel of time
+- Generating summary of the transcript
+- integrating chatbot
 
 ## Accomplishments that we're proud of
 
 ## What we learned
+- how the background processes work in an chrome extension
+- integrating chatbot into a website
 
-## What's next for Untitled
-
+## What's next for Note-Worthy
+- Allowing teachers to prompt a quiz on demand 
+- Assist students by identifying weaknesses and providing resources
+- Adding Lecture Insights for  Webcam on sessions
+- Connecting chat with Google Assistant & Amazon Alexa 
 
 
 ## 💡 features
 
 
 ## 💻 samples:
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img1.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img2.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img3.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img4.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img5.png">
-<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img7.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img8.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img9.png">

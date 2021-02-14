@@ -32,7 +32,7 @@ export default function note() {
         },
       };
       const response = await axios.get(
-        `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/1/`,
+        `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/${id}/`,
         config
       );
 
@@ -79,6 +79,15 @@ export default function note() {
             id="meetingText"
             placeholder="(Meeting text will appear here)"
             value={data.transcript}
+          ></textarea>
+          <h3 className="pt-10 pb-1 font-medium text-purple-700 text-1xl">
+            Summary of Above transcript
+          </h3>
+
+          <textarea
+            id="meetingText"
+            placeholder="(Once the class ends, summary will appear here!)"
+            value={data.summary}
           ></textarea>
           <div>
             {/* {ques.map((e) => (

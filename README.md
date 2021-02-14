@@ -13,6 +13,13 @@
 
 
 ## What it does
+- Increase Engagement
+- Pre-made Questions
+- Study Guide Creation
+- Feedback on Lectures
+- Lesson and Lesson Summaries Transcript
+- Archive of Information
+
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/flowdiag.png" >
 
 
@@ -24,7 +31,12 @@
 
 ## What we learned
 
-## What's next for Untitled
+## What's next for Note-Worthy
+- Allowing teachers to prompt a quiz on demand 
+- Assist students by identifying weaknesses and providing resources
+- Adding Lecture Insights for  Webcam on sessions
+- Connecting chat with Google Assistant & Amazon Alexa 
+
 
 
 
@@ -32,12 +44,12 @@
 
 
 ## 💻 samples:
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img1.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img2.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img3.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img4.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img5.png">
-<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img7.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img8.png">
 <img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img9.png">

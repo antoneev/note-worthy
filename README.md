@@ -1,9 +1,11 @@
 # Treehacks-2021
 
 ## 🔗 Links
-
+- [Note-Worthy](https://note-worthy.vercel.app/)
+- [Note-Worthy Backend](https://treehacks-server-oj3ri.ondigitalocean.app/)
 
 ## ❓ Problem Statement
+> One of the problems currently faced by students around the world is the new way of learning, virtual learning. This leaves teachers with the age long problem of how to keep students engaged.
 
 
 ## 🤔 Challenges we faced
@@ -21,26 +23,35 @@
 - do ```yarn dev``` to run nextjs local server
 
 ## Tech Stacks & dependencies
-##### 🤖 Backend
-- django-rest-framework
+##### :robot: Backend
+- Django-rest-framework
 - Python
-- azure
-- digital ocean
+- Azure
+- Digital ocean
 - PostgreSQL
 
-
-##### 🌟 Frontend
-- nextjs
-- chrome extention
+##### :star2: Frontend
+- Nextjs
+- Chrome extention
 - HTML/CSS
 - Javascript
-- tailwindcss
+- Tailwindcss
+- Vercel.app
+- React-Toast-Notifications
+- React-Simple-Chatbot
+- React-Loader-Spinner
 
-##### 🤖 Machine Learning
-- deep ai summarizer
-- matplotlib.pyplot
-- pandas
-- numpy
+##### :robot: Machine Learning
+- Deep ai's summarizer
+- Matplotlib.pyplot
+- Pandas
+- Numpy
+- Textblob
+- Spacy en_core_web_sm
+- Gensim
+- Regular Expression
+- Textblob
+- Note-Worthy Chatbot
 
 ## made with 💕 by:
 - [Antone Evans](https://github.com/antoneev)

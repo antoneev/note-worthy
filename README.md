@@ -30,6 +30,10 @@
 - integrating chatbot
 
 ## Accomplishments that we're proud of
+-  Developing a Chrome extension dashboard to convert lectures to text
+-  Generating questions from summary using a Naive-Bayes Machine learning model
+-  Providing Graph analytics based on sentiment analysis for better understanding of lectures
+
 
 ## What we learned
 - how the background processes work in an chrome extension

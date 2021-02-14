@@ -9,8 +9,8 @@ export default function login() {
   const router = useRouter();
   const { addToast } = useToasts();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("a@a.com");
+  const [password, setPassword] = useState("a@a.com");
   const [loading, setLoading] = useState(false);
 
   const login = async (e) => {

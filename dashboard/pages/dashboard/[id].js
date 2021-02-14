@@ -23,11 +23,9 @@ export default function note() {
         },
       };
       const response = await axios.get(
-        `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/1/`,
-        config
+          `https://treehacks-server-oj3ri.ondigitalocean.app/quickstart/class-session/retrieve/1/`,
+          config
       );
-
-      console.log(`rrrrr ${response}`);
 
       addToast(`Notes Loaded successfully!`, {
         appearance: "success",
@@ -60,25 +58,28 @@ export default function note() {
   if (loading) return <div>loading...</div>;
 
   return (
-    <div>
-      <div className="flex flex-row">
-        <SideBar />
-        <div className="p-10 m-auto">
-          <h1 className="pb-0 font-semibold text-2xl">
-            Class Conversation Recording
-          </h1>
-          <h3 className="pb-5 font-light text-1xl">{data.session_name}</h3>
-          <textarea
-            id="meetingText"
-            placeholder="(Meeting text will appear here)"
-            value={data.transcript}
-          ></textarea>
-          <div className="pt-14">
-            {/* <div>{ques}</div> */}
-            {/* <MainQuiz questions={[]} /> */}
+      <div>
+        <div className="flex flex-row">
+          <SideBar />
+          <div className="p-10 m-auto">
+            <h1 className="pb-0 font-semibold text-2xl">
+              Class Conversation Recording
+            </h1>
+            <h3 className="pb-5 font-light text-1xl">{data.session_name}</h3>
+            <textarea
+                id="meetingText"
+                placeholder="(Meeting text will appear here)"
+                value={data.transcript}
+            ></textarea>
+            <div>
+              {ques.map((e) => (
+                  <div key={e.id} className="p-4 lg:w-1/3">
+                    {e.id}
+                  </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }

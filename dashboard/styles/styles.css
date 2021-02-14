@@ -54,9 +54,9 @@ button {
   border-radius: 05%;
 }
 
-button:hover {
+/* button:hover {
   background-color: #c6c6c6;
-}
+} */
 
 #correctAnswer {
   font-weight: bold;

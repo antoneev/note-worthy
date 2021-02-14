@@ -5,6 +5,7 @@ import MainQuiz from "../../components/dashboard/mainQuiz";
 import { useRouter } from "next/router";
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
+import ChatBot from "../../components/chatbot/chatbot";
 
 export default function note() {
   const router = useRouter();
@@ -92,6 +93,7 @@ export default function note() {
           </div>
         </div>
       </div>
+      <ChatBot id={id} />
     </div>
   );
 }

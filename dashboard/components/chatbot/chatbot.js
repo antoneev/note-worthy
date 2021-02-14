@@ -9,6 +9,8 @@ class DBPedia extends Component {
   constructor(props) {
     super(props);
 
+    console.log(this.props.id);
+
     this.state = {
       loading: true,
       result: "",

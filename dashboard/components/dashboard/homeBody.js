@@ -98,7 +98,6 @@ export default function homeBody() {
           </div>
         </div>
       </section>
-      <ChatBot />
     </div>
   );
 }

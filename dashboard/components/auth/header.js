@@ -4,7 +4,7 @@ export default function header() {
   return (
     <div>
       <h2 className="text-3xl font-bold text-center text-gray-700 dark:text-white">
-        Note Worthy
+        Note-Worthy
       </h2>
       <div className="hero container max-w-screen-lg mx-auto pt-5 pb-2">
         <img

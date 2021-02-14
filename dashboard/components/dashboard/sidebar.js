@@ -182,7 +182,7 @@ export default function sidebar() {
               alt="avatar"
             />
             <h4 className="mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">
-              John Doe
+              Antone Evan's
             </h4>
           </div>
         </div>

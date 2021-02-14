@@ -1,20 +1,48 @@
 # Treehacks-2021
 
+
 ## 🔗 Links
 - [Note-Worthy](https://note-worthy.vercel.app/)
 - [Note-Worthy Backend](https://treehacks-server-oj3ri.ondigitalocean.app/)
+
+## Inspiration
+
 
 ## ❓ Problem Statement
 > One of the problems currently faced by students around the world is the new way of learning, virtual learning. This leaves teachers with the age long problem of how to keep students engaged.
 
 
-## 🤔 Challenges we faced
+## What it does
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/flowdiag.png" >
+
+
+## How we built it
+
+## Challenges we ran into
+
+## Accomplishments that we're proud of
+
+## What we learned
+
+## What's next for Untitled
+
 
 
 ## 💡 features
 
 
 ## 💻 samples:
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img1.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img2.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img3.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img4.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img5.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img6.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img7.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img8.png">
+<img src="https://github.com/antoneev/treehacks-2021/blob/main/mockups/img9.png">
+
+
 
 
 ## 👣 steps to run the project
@@ -23,6 +51,20 @@
 - do ```yarn dev``` to run nextjs local server
 
 ## Tech Stacks & dependencies
+| 🤖 Backend   | 🪟 Frontend  | 🖥  Machine Learning  |
+|---|---|---|
+| Django-rest-framework  | Nextjs  | Deep ai's summarizer  |
+| Python  | Chrome extention   | Matplotlib.pyplot  |
+| Azure  | HTML/CSS  | Pandas  |
+| Digital ocean  | Javascript  | Numpy  |
+| PostgreSQL  | Tailwindcss  | Textblob  |
+|   | Vercel.app  |  Spacy en_core_web_sm |
+|   | React-Toast-Notifications  | Gensim  |
+|   | React-Simple-Chatbot  | Regular Expression  |
+|   | React-Loader-Spinner  | Textblob  |
+|   |   | Note-Worthy Chatbot  |
+
+<!---
 ##### :robot: Backend
 - Django-rest-framework
 - Python
@@ -30,6 +72,7 @@
 - Digital ocean
 - PostgreSQL
 
+<!---
 ##### :star2: Frontend
 - Nextjs
 - Chrome extention
@@ -41,6 +84,7 @@
 - React-Simple-Chatbot
 - React-Loader-Spinner
 
+<!---
 ##### :robot: Machine Learning
 - Deep ai's summarizer
 - Matplotlib.pyplot
@@ -52,6 +96,7 @@
 - Regular Expression
 - Textblob
 - Note-Worthy Chatbot
+--->
 
 ## made with 💕 by:
 - [Antone Evans](https://github.com/antoneev)
